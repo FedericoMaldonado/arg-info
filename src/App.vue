@@ -1,24 +1,211 @@
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
+  <v-toolbar density="default" :elevation="8" color="#1976D2">
+    <v-img src="/images/logo-original.png" max-height="135" contain></v-img>
+  </v-toolbar>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <div class="global-container">
+    <!-- CONTAINER OF EVENTS -->
+    <section class="container">
+      <article class="container-article">
+        <div class="container-events">
+          <div class="tittle-events"><h1>Eventos</h1></div>
+          <div class="cards">
+            <v-card
+              class="mx-auto"
+              id="card"
+              elevation="8"
+              color="#1976D2"
+              max-width="250"
+            >
+              <v-card-item>
+                <v-card-title> Feriados </v-card-title>
+              </v-card-item>
+              <v-card-text> Todos los feriados del año indicado. </v-card-text>
+              <v-btn
+                class="d-flex ga-2 mt-2"
+                size="small"
+                color="#212121"
+                rounded="0"
+              >
+                <RouterLink to="/feriados"> Ver información </RouterLink>
+              </v-btn>
+            </v-card>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+            <v-card
+              class="mx-auto"
+              id="card"
+              elevation="8"
+              color="#1976D2"
+              max-width="250"
+            >
+              <v-card-item>
+                <v-card-title> Presidentes </v-card-title>
+              </v-card-item>
+              <v-card-text> Todos los presidentes de la historia. </v-card-text>
+              <v-btn
+                class="d-flex ga-2 mt-2"
+                size="small"
+                color="#212121"
+                rounded="0"
+              >
+                <RouterLink to="/presidentes"> Ver información </RouterLink>
+              </v-btn>
+            </v-card>
+          </div>
+        </div>
+      </article>
 
-  <RouterView />
+      <!-- CONTAINER OF HISTORICAL QUOTES -->
+      <article class="container-article">
+        <div class="container-historical-quotes">
+          <div class="tittle-events"><h1>Cotizaciones históricas</h1></div>
+          <div class="cards">
+            <v-card
+              class="mx-auto"
+              id="card"
+              elevation="8"
+              color="#1976D2"
+              max-width="250"
+            >
+              <v-card-item>
+                <v-card-title> Dólares </v-card-title>
+              </v-card-item>
+              <v-card-text>
+                Devuelve una lista de cotizaciones del dólar.
+              </v-card-text>
+              <v-btn
+                class="d-flex ga-2 mt-7"
+                size="small"
+                color="#212121"
+                rounded="0"
+              >
+                <RouterLink to="/feriados"> Ver información </RouterLink>
+              </v-btn>
+            </v-card>
+
+            <v-card
+              class="mx-auto"
+              id="card"
+              elevation="8"
+              color="#1976D2"
+              max-width="250"
+            >
+              <v-card-item>
+                <v-card-title> Dólares por casa </v-card-title>
+              </v-card-item>
+              <v-card-text>
+                Devuelve las cotizaciones del dólar de la casa de cambio
+                especificada.
+              </v-card-text>
+              <v-btn
+                class="d-flex ga-2 mt-2"
+                size="small"
+                color="#212121"
+                rounded="0"
+              >
+                <RouterLink to="/presidentes"> Ver información </RouterLink>
+              </v-btn>
+            </v-card>
+          </div>
+        </div>
+      </article>
+      <article class="container-article">
+        <div class="container-finance">
+          <div class="tittle-events"><h1>Finanzas</h1></div>
+          <div class="cards">
+            <v-card
+              class="mx-auto"
+              id="card"
+              elevation="8"
+              color="#1976D2"
+              max-width="250"
+            >
+              <v-card-item>
+                <v-card-title> Índices </v-card-title>
+              </v-card-item>
+              <v-card-text>
+                Todos los indices de inflación (mensual, interanual, UVA).
+              </v-card-text>
+              <v-btn
+                class="d-flex ga-2 mt-7"
+                size="small"
+                color="#212121"
+                rounded="0"
+              >
+                <RouterLink to="/feriados"> Ver información </RouterLink>
+              </v-btn>
+            </v-card>
+
+            <v-card
+              class="mx-auto"
+              id="card"
+              elevation="8"
+              color="#1976D2"
+              max-width="250"
+            >
+              <v-card-item>
+                <v-card-title> Tasas </v-card-title>
+              </v-card-item>
+              <v-card-text>
+                Lista de tasas de plazo fijo y de interés por dépositos a 30
+                días .
+              </v-card-text>
+              <v-btn
+                class="d-flex ga-2 mt-2"
+                size="small"
+                color="#212121"
+                rounded="0"
+              >
+                <RouterLink to="/presidentes"> Ver información </RouterLink>
+              </v-btn>
+            </v-card>
+            <v-card
+              class="mx-auto"
+              id="card"
+              elevation="8"
+              color="#1976D2"
+              max-width="250"
+            >
+              <v-card-item>
+                <v-card-title> Rendimientos </v-card-title>
+              </v-card-item>
+              <v-card-text>
+                Lista de rendimientos de distintas monedas por entidad.
+              </v-card-text>
+              <v-btn
+                class="d-flex ga-2 mt-2"
+                size="small"
+                color="#212121"
+                rounded="0"
+              >
+                <RouterLink to="/presidentes"> Ver información </RouterLink>
+              </v-btn>
+            </v-card>
+            <v-card
+              class="mx-auto"
+              id="card"
+              elevation="8"
+              color="#1976D2"
+              max-width="250"
+            >
+              <v-card-item>
+                <v-card-title> FCI </v-card-title>
+              </v-card-item>
+              <v-card-text> Lista de fondos comunes de inversión. </v-card-text>
+              <v-btn
+                class="d-flex ga-2 mt-7"
+                size="small"
+                color="#212121"
+                rounded="0"
+              >
+                <RouterLink to="/presidentes"> Ver información </RouterLink>
+              </v-btn>
+            </v-card>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -26,65 +213,91 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+.global-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
+.v-card-title {
   text-align: center;
-  margin-top: 2rem;
+  background-color: #212121;
+  color: #e6ae4a;
+  border-radius: 4px;
+}
+.v-card-text {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #000000;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+/* START OF CARDS */
+.container-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #212121;
+  padding: 15px;
+  width: auto;
+  border-radius: 4px;
+  margin: 30px;
+  flex-wrap: wrap;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+.container-historical-quotes,
+.container-events,
+.container-finance {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-nav a:first-of-type {
-  border: 0;
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+.tittle-events {
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cards a {
+  display: flex;
+  text-decoration: none;
+  font-weight: bold;
+  color: #1976d2;
+}
+
+#card:hover {
+  position: relative;
+  outline: 1px solid #e6ae4a;
+}
+/* END OF CARDS */
+
+/* RESPONSIVE */
+@media (max-width: 615px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 </style>
