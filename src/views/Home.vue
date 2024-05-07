@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { RouterLink } from "vue-router";
+</script>
+
 <template>
   <v-toolbar density="default" :elevation="8" color="#1976D2">
     <v-img src="/images/logo-original.png" max-height="135" contain></v-img>
@@ -208,10 +212,6 @@
     </section>
   </div>
 </template>
-
-<script setup lang="ts">
-import { RouterLink } from "vue-router";
-</script>
 
 <style scoped>
 .global-container {
