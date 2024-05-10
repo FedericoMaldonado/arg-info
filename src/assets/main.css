@@ -11,3 +11,7 @@ body {
   background-color: #151515;
   color: #ffffff;
 }
+
+h1 {
+  text-shadow: 2px 2px 4px #000000;
+}
