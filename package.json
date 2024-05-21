@@ -11,9 +11,7 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.8",
     "axios": "^1.6.8",
-    "v-calendar": "^3.1.2",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0",
     "vuetify": "^3.6.3"
