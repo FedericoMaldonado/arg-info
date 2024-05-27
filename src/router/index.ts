@@ -30,11 +30,6 @@ const router = createRouter({
       component: () => import("@/views/DolaresPorCasaView.vue"),
     },
     {
-      path: "/dolaresporcasayfecha",
-      name: "DolaresPorCasayFechaView",
-      component: () => import("@/views/DolaresPorCasayFechaView.vue"),
-    },
-    {
       path: "/indices",
       name: "IndicesView",
       component: () => import("@/views/IndicesView.vue"),

@@ -42,12 +42,6 @@ import { RouterLink } from "vue-router";
           <router-link to="/dolaresporcasa">
             <v-list-item-title class="mt-5">Dólares por casa</v-list-item-title>
           </router-link>
-
-          <router-link to="/dolaresporcasayfecha">
-            <v-list-item-title class="mt-5"
-              >Dólar por casa y fecha</v-list-item-title
-            >
-          </router-link>
         </v-list-item>
       </v-list>
     </v-menu>
