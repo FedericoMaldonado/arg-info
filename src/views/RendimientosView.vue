@@ -10,9 +10,18 @@
       color="#e6ae4a"
     ></v-select>
 
-    <v-container>
+    <v-container class="container-criptos">
+      <section class="container-info">
+        <p>
+          <strong :class="`pregunta`"
+            >¿Que es (APY) en criptomonedas?<br
+          /></strong>
+          El Annual Percent Yield (APY) es una medida que se usa para calcular
+          el interés que cierta inversión va a dejar a lo largo de un año.
+        </p>
+      </section>
       <section
-        class="container-monedas"
+        class="container-tabla"
         v-for="moneda in filteredMoney"
         :key="moneda"
       >
@@ -64,11 +73,34 @@ console.log(data);
 h1 {
   padding-top: 50px;
 }
+.container-criptos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-.container-monedas {
+.container-info {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid #1976d2;
+  background-color: #212121;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.pregunta {
+  color: #e6ae4a;
+}
+
+.container-tabla {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
+
 .tabla {
   border: 1px solid #1976d2;
   background-color: #212121;
