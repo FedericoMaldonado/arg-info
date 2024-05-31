@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { RouterLink } from "vue-router";
-</script>
-
 <template>
   <v-toolbar density="default" :elevation="8" color="#1976D2">
     <v-img src="/images/logo-original.png" max-height="135" contain></v-img>
@@ -211,7 +207,41 @@ import { RouterLink } from "vue-router";
       </article>
     </section>
   </div>
+
+  <footer class="footer">
+    <div class="elements-footer">
+      <div class="icons">
+        <div v-for="icon in icons" :key="icon">
+          <a :href="icon.link" target="_blank"><img :src="icon.image" /></a>
+        </div>
+      </div>
+      <div class="descripcion">
+        <p>Desarrollador: Federico Maldonado</p>
+      </div>
+    </div>
+  </footer>
 </template>
+
+<script setup lang="ts">
+import { ref } from "vue";
+
+type icons = [
+  {
+    image: string;
+    link: string;
+  }
+];
+const icons = ref<icons>([
+  {
+    image: "/public/icons/github.svg",
+    link: "https://github.com/FedericoMaldonado",
+  },
+  {
+    image: "/public/icons/linkedin.svg",
+    link: "https://www.linkedin.com/in/federico-maldonado-213107225/",
+  },
+]);
+</script>
 
 <style scoped>
 .global-container {
@@ -288,6 +318,33 @@ h1 {
   outline: 1px solid #e6ae4a;
 }
 /* END OF CARDS */
+
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1976d2;
+  text-shadow: 2px 2px 4px #000000;
+  padding: 3px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  display: flex;
+
+  width: 35px;
+  transition: 0.2s;
+}
+img:hover {
+  transform: scale(1.1, 1.1);
+  transition: 0.2s;
+  cursor: pointer;
+}
 
 /* RESPONSIVE */
 @media (max-width: 615px) {
