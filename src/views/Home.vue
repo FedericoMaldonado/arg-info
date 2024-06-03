@@ -229,6 +229,10 @@ type icons = [
   {
     image: string;
     link: string;
+  },
+  {
+    image: string;
+    link: string;
   }
 ];
 const icons = ref<icons>([
