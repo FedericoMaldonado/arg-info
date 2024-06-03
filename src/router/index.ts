@@ -49,6 +49,26 @@ const router = createRouter({
       name: "FciView.vue",
       component: () => import("@/views/FciView.vue"),
     },
+    {
+      path: "/mercadodedinero",
+      name: "MercadoDinero.vue",
+      component: () => import("@/views/MercadoDinero.vue"),
+    },
+    {
+      path: "/rentavariable",
+      name: "RentaVariable.vue",
+      component: () => import("@/views/RentaVariable.vue"),
+    },
+    {
+      path: "/rentafija",
+      name: "RentaFija.vue",
+      component: () => import("@/views/RentaFija.vue"),
+    },
+    {
+      path: "/rentamixta",
+      name: "RentaMixta.vue",
+      component: () => import("@/views/RentaMixta.vue"),
+    },
   ],
 });
 
