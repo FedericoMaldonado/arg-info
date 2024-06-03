@@ -20,11 +20,14 @@
           el interés que cierta inversión va a dejar a lo largo de un año.
         </p>
       </section>
+
       <section
         class="container-tabla"
         v-for="moneda in filteredMoney"
         :key="moneda"
       >
+        <h2>{{ moneda.entidad.toUpperCase() }}</h2>
+
         <v-table class="tabla">
           <thead>
             <tr>
@@ -50,7 +53,6 @@
 import Toolbar from "../components/Toolbar.vue";
 import { ref, computed } from "vue";
 import { useGetData } from "@/composables/useGetData";
-
 const { getData, data } = useGetData();
 
 const selectedOption = ref("buenbit");
@@ -65,7 +67,7 @@ const filteredMoney = computed(() => {
   return [];
 });
 
-getData(" https://api.argentinadatos.com/v1/finanzas/rendimientos");
+getData("https://api.argentinadatos.com/v1/finanzas/rendimientos");
 console.log(data);
 </script>
 
@@ -98,7 +100,12 @@ h1 {
 .container-tabla {
   display: flex;
   flex-direction: column;
+  text-align: center;
   width: 100%;
+}
+
+.container-tabla h2 {
+  margin: 10px;
 }
 
 .tabla {
