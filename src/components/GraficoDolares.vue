@@ -1,6 +1,9 @@
 <template>
   <div class="grafico">
-    <select class="seleccionarAño" v-model="anioSeleccionado">
+    <div class="spinner-dates" v-if="!data">
+      <h2>cargando información...</h2>
+    </div>
+    <select class="seleccionarAño" v-model="anioSeleccionado" v-else>
       <option
         class="opcion"
         v-for="anio in anioDisponible"

@@ -1,6 +1,9 @@
 <template>
   <div class="grafico">
-    <h2>Índice UVA</h2>
+    <div class="spinner-dates" v-if="!data">
+      <h2>cargando información...</h2>
+    </div>
+    <h2 v-else>Índice UVA</h2>
     <canvas ref="myChart"></canvas>
   </div>
 </template>

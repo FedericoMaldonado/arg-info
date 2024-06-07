@@ -4,7 +4,8 @@
     <h1>Renta mixta</h1>
     <BackButton />
   </div>
-  <section class="container-tabla">
+  <div class="spinner-dates" v-if="!data"><h2>cargando información...</h2></div>
+  <section class="container-tabla" v-else>
     <v-table class="tabla">
       <thead>
         <tr>
@@ -67,6 +68,16 @@ onMounted(() => {
 });
 </script>
 <style scoped>
+.backbutton {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 100px;
+  gap: 20px;
+}
+
 .container-tabla {
   display: flex;
   flex-direction: column;
@@ -101,15 +112,5 @@ thead th {
 
 #nohaydata {
   color: red;
-}
-
-.backbutton {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 50px;
-  gap: 20px;
 }
 </style>

@@ -274,7 +274,7 @@ const mostrarPanelTerminos = (index: number) => {
 
 <style scoped>
 h1 {
-  margin-top: 50px;
+  padding-top: 100px;
 }
 
 .container-global {

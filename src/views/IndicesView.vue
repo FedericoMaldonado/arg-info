@@ -21,7 +21,7 @@ import GraficoUVA from "@/components/GraficoUVA.vue";
 
 <style scoped>
 h1 {
-  padding-top: 50px;
+  padding-top: 100px;
 }
 .container-graficos {
   display: flex;

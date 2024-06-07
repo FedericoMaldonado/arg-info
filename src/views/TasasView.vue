@@ -1,6 +1,7 @@
 <template>
   <Toolbar />
   <h1>Tasas</h1>
+
   <div class="container-graficos">
     <div class="graficos">
       <GraficoPlazoFijo />
@@ -17,7 +18,7 @@ import GraficoDepositosA30Dias from "@/components/GraficoDepositosA30Dias.vue";
 
 <style scoped>
 h1 {
-  padding-top: 50px;
+  padding-top: 100px;
 }
 .container-graficos {
   display: flex;

@@ -1,7 +1,10 @@
 <template>
   <Toolbar />
   <h1>Rendimientos</h1>
-  <article class="container-principal">
+  <div class="spinner-dates" v-if="!data">
+    <h2>cargando información...</h2>
+  </div>
+  <article class="container-principal" v-else>
     <v-select
       label="Seleccionar moneda"
       :items="['buenbit', 'fiwind', 'letsbit', 'belo', 'lemoncash', 'ripio']"
@@ -73,7 +76,7 @@ console.log(data);
 
 <style scoped>
 h1 {
-  padding-top: 50px;
+  padding-top: 100px;
 }
 .container-criptos {
   display: flex;

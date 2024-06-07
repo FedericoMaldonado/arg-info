@@ -1,5 +1,8 @@
 <template>
-  <article class="container-principal">
+  <div class="spinner-dates" v-if="!data">
+    <h2>cargando información...</h2>
+  </div>
+  <article class="container-principal" v-else>
     <v-select
       label="Buscar feriados"
       :items="['Todos', 'Pasados', 'Próximos']"

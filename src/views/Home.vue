@@ -237,11 +237,11 @@ type icons = [
 ];
 const icons = ref<icons>([
   {
-    image: "/public/icons/github.svg",
+    image: "icons/github.svg",
     link: "https://github.com/FedericoMaldonado",
   },
   {
-    image: "/public/icons/linkedin.svg",
+    image: "icons/linkedin.svg",
     link: "https://www.linkedin.com/in/federico-maldonado-213107225/",
   },
 ]);

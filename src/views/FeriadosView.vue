@@ -1,6 +1,7 @@
 <template>
   <Toolbar />
   <h1>Feriados 2024</h1>
+
   <Calendar />
 </template>
 
@@ -12,6 +13,6 @@ import Calendar from "@/components/Calendar.vue";
 
 <style scoped>
 h1 {
-  padding-top: 50px;
+  padding-top: 100px;
 }
 </style>

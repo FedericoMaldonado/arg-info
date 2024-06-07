@@ -1,6 +1,9 @@
 <template>
   <div class="grafico">
-    <select class="seleccionarCasa" v-model="casaSeleccionada">
+    <div class="spinner-dates" v-if="!data">
+      <h2>cargando información...</h2>
+    </div>
+    <select class="seleccionarCasa" v-model="casaSeleccionada" v-else>
       <option
         class="opcion"
         v-for="casa in casasDisponibles"

@@ -13,7 +13,7 @@ import GraficoDolares from "@/components/GraficoDolares.vue";
 
 <style scoped>
 h1 {
-  padding-top: 50px;
+  padding-top: 100px;
 }
 .container-graficos {
   display: flex;

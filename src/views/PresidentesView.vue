@@ -1,6 +1,7 @@
 <template>
   <Toolbar />
   <h1>Presidentes</h1>
+
   <div class="container">
     <v-table class="tabla">
       <thead :class="`orange`">
@@ -438,7 +439,7 @@ const presidentes = ref<Presidente[]>([
 
 <style scoped>
 h1 {
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 .container {
