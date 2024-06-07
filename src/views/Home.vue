@@ -213,7 +213,7 @@
   <footer class="footer">
     <div class="elements-footer">
       <div class="icons">
-        <div v-for="icon in icons" :key="icon">
+        <div v-for="icon in icons" :key="icon.image">
           <a :href="icon.link" target="_blank"><img :src="icon.image" /></a>
         </div>
       </div>

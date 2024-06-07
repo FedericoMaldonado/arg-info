@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="grafico">
     <div class="spinner-dates" v-if="!data">
       <h2>cargando información...</h2>
@@ -61,7 +61,6 @@ watch(
             backgroundColor: "#1976D2",
             data: datasetData,
             borderWidth: 0,
-            radius: 0,
             fill: true,
           },
         ],
@@ -91,4 +90,71 @@ h2 {
   border: 1px solid #1976d2;
   background-color: #212121;
 }
-</style>
+</style> -->
+
+<script setup lang="ts">
+import { ref, onMounted, watch } from "vue";
+import {
+  Chart,
+  registerables,
+  type ChartData,
+  type ChartOptions,
+} from "chart.js";
+import { useGetData } from "@/composables/useGetData";
+
+Chart.register(...registerables);
+
+const myChart = ref<HTMLCanvasElement | null>(null);
+const indice = ref<any[]>([]);
+const { getData, data } = useGetData();
+
+const initializeChart = (chartData: ChartData<"line">) => {
+  if (myChart.value) {
+    new Chart(myChart.value, {
+      type: "line",
+      data: chartData,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: "top",
+          },
+        },
+        interaction: {
+          intersect: false,
+        },
+      } as ChartOptions<"line">,
+    });
+  }
+};
+
+watch(
+  data,
+  (newData) => {
+    if (Array.isArray(newData) && newData.length > 0) {
+      indice.value = newData;
+      const labels = indice.value.map((indi: any) => indi.fecha);
+      const datasetData = indice.value.map((indi: any) => indi.valor);
+      const chartData: ChartData<"line"> = {
+        labels,
+        datasets: [
+          {
+            label: "Índice UVA",
+            backgroundColor: "#1976D2",
+            data: datasetData,
+            borderWidth: 0,
+            fill: true,
+          },
+        ],
+      };
+
+      initializeChart(chartData);
+    }
+  },
+  { immediate: true }
+);
+
+onMounted(() => {
+  getData("https://api.argentinadatos.com/v1/finanzas/indices/uva");
+});
+</script>

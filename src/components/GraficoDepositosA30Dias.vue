@@ -64,7 +64,6 @@ watch(
             backgroundColor: "#1976D2",
             data: datasetData,
             borderWidth: 0,
-            radius: 0,
             fill: true,
           },
         ],

@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="grafico">
     <div class="spinner-dates" v-if="!data">
       <h2>cargando información...</h2>
@@ -16,6 +16,7 @@ import {
   registerables,
   type ChartData,
   type ChartOptions,
+  type ScatterDataPoint,
 } from "chart.js";
 
 Chart.register(...registerables);
@@ -56,7 +57,7 @@ watch(
         (plazo: any) => plazo.tnaNoClientes
       );
 
-      const chartData: ChartData<"line"> = {
+      const chartData: ChartData<"line", number | ScatterDataPoint | null[]> = {
         labels,
         datasets: [
           {
@@ -81,6 +82,108 @@ watch(
   },
   { immediate: true }
 );
+onMounted(() => {
+  getData("https://api.argentinadatos.com/v1/finanzas/tasas/plazoFijo");
+});
+</script>
+
+<style scoped>
+h2 {
+  color: #e6ae4a;
+}
+
+.grafico {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0px;
+  padding: 15px;
+  width: 100%;
+  border: 1px solid #1976d2;
+  background-color: #212121;
+}
+</style> -->
+
+<template>
+  <div class="grafico">
+    <div class="spinner-dates" v-if="!data">
+      <h2>cargando información...</h2>
+    </div>
+    <h2 v-else>Plazo Fijo</h2>
+    <canvas ref="myChart"></canvas>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { onMounted, ref, watch } from "vue";
+import { useGetData } from "../composables/useGetData";
+import {
+  Chart,
+  registerables,
+  type ChartData,
+  type ChartOptions,
+} from "chart.js";
+
+Chart.register(...registerables);
+
+const { getData, data } = useGetData();
+
+const myChart = ref<HTMLCanvasElement | null>(null);
+const plazoFijo = ref<any[]>([]);
+
+// Función para inicializar el gráfico
+const initializeChart = (chartData: ChartData<"bar">) => {
+  if (myChart.value) {
+    new Chart(myChart.value, {
+      type: "bar",
+      data: chartData,
+      options: {
+        responsive: true,
+        indexAxis: "y",
+      } as ChartOptions<"bar">,
+    });
+  }
+};
+
+// Watch para detectar cambios en los datos y actualizar el gráfico
+watch(
+  data,
+  (newData) => {
+    if (Array.isArray(newData) && newData.length > 0) {
+      plazoFijo.value = newData;
+      const labels = plazoFijo.value.map((plazo: any) => plazo.entidad);
+
+      const tnaClientes = plazoFijo.value.map(
+        (plazo: any) => plazo.tnaClientes
+      );
+      const tnaNoClientes = plazoFijo.value.map(
+        (plazo: any) => plazo.tnaNoClientes
+      );
+
+      const chartData: ChartData<"bar"> = {
+        labels,
+        datasets: [
+          {
+            label: "Clientes",
+            backgroundColor: "#1976D2",
+            data: tnaClientes,
+            borderWidth: 0,
+          },
+          {
+            label: "No clientes",
+            backgroundColor: "#ffffff",
+            data: tnaNoClientes,
+            borderWidth: 0,
+          },
+        ],
+      };
+
+      initializeChart(chartData);
+    }
+  },
+  { immediate: true }
+);
+
 onMounted(() => {
   getData("https://api.argentinadatos.com/v1/finanzas/tasas/plazoFijo");
 });
