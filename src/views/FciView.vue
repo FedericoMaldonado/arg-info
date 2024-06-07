@@ -14,6 +14,7 @@
               color="#1976D2"
               max-width="250"
             >
+              <!-- container de mercado de dinero-->
               <v-card-item>
                 <v-card-title> Mercado de dinero </v-card-title>
               </v-card-item>
@@ -38,6 +39,7 @@
               color="#1976D2"
               max-width="250"
             >
+              <!-- container de ranta variable-->
               <v-card-item>
                 <v-card-title> Renta variable </v-card-title>
               </v-card-item>
@@ -61,6 +63,7 @@
               color="#1976D2"
               max-width="250"
             >
+              <!-- container de renta fija-->
               <v-card-item>
                 <v-card-title> Renta fija </v-card-title>
               </v-card-item>
@@ -84,6 +87,7 @@
               color="#1976D2"
               max-width="250"
             >
+              <!-- container de renta mixta -->
               <v-card-item>
                 <v-card-title> Renta mixta </v-card-title>
               </v-card-item>
@@ -119,6 +123,7 @@
         gestionar directamente los activos.
       </p>
 
+      <!-- Container de paneles -->
       <div class="container-paneles">
         <h3>Tipos de Fondos Comunes de Inversión (FCI) en Argentina:</h3>
         <v-expansion-panels class="paneles" bg-color="#FFFFFF00">
@@ -159,6 +164,7 @@
         necesidades del inversor.
       </p>
 
+      <!-- Container de paneles -->
       <div class="container-paneles">
         <h3>Tipos de Fondos Comunes de Inversión (FCI) en Argentina:</h3>
         <v-expansion-panels class="paneles" bg-color="#FFFFFF00">
@@ -195,6 +201,7 @@
 import { ref } from "vue";
 import Toolbar from "../components/Toolbar.vue";
 
+// Arreglos que almacenan la información de los paneles.
 const informacionFCI = ref([
   {
     title: "FCI DE MERCADO DE DINERO",
@@ -254,6 +261,7 @@ const significadosTerminos = ref([
       "En el contexto de los FCI, el patrimonio se refiere al valor total de los activos administrados por el fondo, menos los pasivos. Este patrimonio está compuesto por las inversiones realizadas con los aportes de los cuotapartistas. El valor del patrimonio fluctúa según el rendimiento de las inversiones del fondo y las entradas y salidas de dinero por parte de los cuotapartistas.",
   },
 ]);
+
 // arreglo de booleanos, donde cada índice corresponde al estado de un panel específico.
 const activar = ref<boolean[]>([]);
 const activarTerminos = ref<boolean[]>([]);
@@ -264,6 +272,7 @@ const mostrarPanel = (index: number) => {
     i === index ? !activar.value[i] : false
   );
 };
+
 //se encarga de actualizar el estado del panel correspondiente al índice que se recibe como parámetro. Además, asegura que solo un panel esté activo a la vez, cerrando los demás paneles.
 const mostrarPanelTerminos = (index: number) => {
   activarTerminos.value = significadosTerminos.value.map((_, i) =>

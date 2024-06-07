@@ -119,8 +119,6 @@ watch(
 onMounted(() => {
   getData("https://api.argentinadatos.com/v1/cotizaciones/dolares");
 });
-
-console.log(data);
 </script>
 
 <style scoped>

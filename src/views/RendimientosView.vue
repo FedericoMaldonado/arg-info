@@ -54,14 +54,15 @@
 
 <script setup lang="ts">
 import Toolbar from "../components/Toolbar.vue";
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { useGetData } from "@/composables/useGetData";
 const { getData, data } = useGetData();
 
-const selectedOption = ref("buenbit");
+const selectedOption = ref("buenbit"); //Por defecto queda seleccionada la opcion "buenbit".
 
 //Filtro los nombres de las monedas en las opciones del v-select
 const filteredMoney = computed(() => {
+  //Hago una comprobación para que se asegure de que (data) es un tipo de array u objeto.
   if (data.value && Array.isArray(data.value)) {
     return data.value.filter((moneda: any) => {
       return moneda.entidad === selectedOption.value;
@@ -70,8 +71,10 @@ const filteredMoney = computed(() => {
   return [];
 });
 
-getData("https://api.argentinadatos.com/v1/finanzas/rendimientos");
-console.log(data);
+// Con el onMounted aseguro que el código se ejecute despues de que el componente haya sido montado.
+onMounted(() => {
+  getData("https://api.argentinadatos.com/v1/finanzas/rendimientos");
+});
 </script>
 
 <style scoped>

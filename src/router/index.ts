@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 
+// IMPORTANTE: Los componentes solamente seran cargados cuando se visite la vista deseada. Excepto el componente Home que es el unico que esta cargado por defecto.
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [

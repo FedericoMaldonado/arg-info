@@ -63,6 +63,7 @@ import { onMounted } from "vue";
 
 const { getData, data } = useGetData();
 
+// Con el onMounted aseguro que el código se ejecute despues de que el componente haya sido montado.
 onMounted(() => {
   getData(" https://api.argentinadatos.com/v1/finanzas/fci/rentaMixta/ultimo");
 });

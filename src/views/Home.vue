@@ -1,10 +1,11 @@
 <template>
+  <!-- Barra de navegación -->
   <v-toolbar density="default" :elevation="8" color="#1976D2">
     <v-img src="/images/logo-original.png" max-height="135" contain></v-img>
   </v-toolbar>
 
   <div class="global-container">
-    <!-- CONTAINER OF EVENTS -->
+    <!-- Container de eventos -->
     <section class="container">
       <article class="container-article">
         <div class="container-events">
@@ -55,7 +56,7 @@
         </div>
       </article>
 
-      <!-- CONTAINER OF HISTORICAL QUOTES -->
+      <!-- Container de historical quotes -->
       <article class="container-article">
         <div class="container-historical-quotes">
           <div class="tittle-events"><h1>Cotizaciones históricas</h1></div>
@@ -109,7 +110,7 @@
           </div>
         </div>
       </article>
-      <!-- CONTAINER OF FINANCE -->
+      <!-- Container de finanzas -->
       <article class="container-article">
         <div class="container-finance">
           <div class="tittle-events"><h1>Finanzas</h1></div>
@@ -208,6 +209,7 @@
     </section>
   </div>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="elements-footer">
       <div class="icons">

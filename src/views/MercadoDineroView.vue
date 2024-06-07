@@ -5,6 +5,8 @@
     <h1>Mercado de dinero</h1>
     <BackButton />
   </div>
+
+  <!-- Mostrara un texto diciendo que la información esta cargando hasta que los datos hayan finalizados. -->
   <div class="spinner-dates" v-if="!data"><h2>cargando información...</h2></div>
   <section class="container-tabla" v-else>
     <v-table class="tabla">
@@ -65,6 +67,7 @@ import { onMounted } from "vue";
 
 const { getData, data } = useGetData();
 
+// Con el onMounted aseguro que el código se ejecute despues de que el componente haya sido montado.
 onMounted(() => {
   getData(
     "https://api.argentinadatos.com/v1/finanzas/fci/mercadoDinero/ultimo"
