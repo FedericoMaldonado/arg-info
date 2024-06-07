@@ -4,8 +4,11 @@
  Este proyecto personal esta hecho a modo de practica, sobre datos relacionados de Argentina como: (presidentes, eventos, 
  cotizaciones históricas y finanzas). Los datos los obtengo desde una API publica que brinda información       
  actualizada llamada (ArgentinaDatos API).
+
+
+ > [!TIP]
+ > Los datos estan presentados visualmente en tablas y en graficos.
  
- Los datos estan visualizados en tablas como en graficos.
 
 ### Información de la API:
 - [API](https://argentinadatos.com/docs/)
