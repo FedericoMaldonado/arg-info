@@ -7,7 +7,7 @@
 
 
  > [!TIP]
- > Los datos estan presentados visualmente en tablas y en graficos.
+ > Los datos estan presentados visualmente en tablas y graficos.
 
 
 ### `Información de la API:`
