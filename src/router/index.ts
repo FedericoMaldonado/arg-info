@@ -51,23 +51,23 @@ const router = createRouter({
     },
     {
       path: "/mercadodedinero",
-      name: "MercadoDinero.vue",
-      component: () => import("@/views/MercadoDinero.vue"),
+      name: "MercadoDineroView.vue",
+      component: () => import("@/views/MercadoDineroView.vue"),
     },
     {
       path: "/rentavariable",
-      name: "RentaVariable.vue",
-      component: () => import("@/views/RentaVariable.vue"),
+      name: "RentaVariableView.vue",
+      component: () => import("@/views/RentaVariableView.vue"),
     },
     {
       path: "/rentafija",
-      name: "RentaFija.vue",
-      component: () => import("@/views/RentaFija.vue"),
+      name: "RentaFijaView.vue",
+      component: () => import("@/views/RentaFijaView.vue"),
     },
     {
       path: "/rentamixta",
-      name: "RentaMixta.vue",
-      component: () => import("@/views/RentaMixta.vue"),
+      name: "RentaMixtaView.vue",
+      component: () => import("@/views/RentaMixtaView.vue"),
     },
   ],
 });
