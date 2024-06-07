@@ -1,18 +1,17 @@
 # arg-info
 
-This template should help get you started developing with Vue 3 in Vite.
+## Descripcion del proyecto:
+ Este proyecto personal esta hecho a modo de practica, sobre datos relacionados de Argentina como: (presidentes, eventos, 
+ cotizaciones históricas y finanzas). Los datos los obtengo desde una API publica que brinda información       
+ actualizada llamada (ArgentinaDatos API).
+ 
+ Los datos estan visualizados en tablas como en graficos.
 
-## Recommended IDE Setup
+### Información de la API:
+ [API]:(https://argentinadatos.com/docs/)
+ [Repositorio]:(https://github.com/enzonotario/esjs-argentina-datos-api)
+ [Desarrollador]:(https://github.com/enzonotario)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
