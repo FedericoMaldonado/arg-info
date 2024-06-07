@@ -147,6 +147,6 @@ console.log(data);
 
 .opcion {
   cursor: pointer;
-  background-color: white;
+  background-color: #212121;
 }
 </style>
