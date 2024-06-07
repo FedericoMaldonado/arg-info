@@ -17,11 +17,10 @@
 
 
 ### Imagenes:
-![home](https://github.com/FedericoMaldonado/arg-info/blob/main/imagenes%20demostrativas/home-escritorio.png)
-![dolares](https://github.com/FedericoMaldonado/arg-info/blob/main/imagenes%20demostrativas/dolares-escritorio.png)
-![feriados](https://github.com/FedericoMaldonado/arg-info/blob/main/imagenes%20demostrativas/feriados-escritorio.png)
-![mobile](https://github.com/FedericoMaldonado/arg-info/blob/main/imagenes%20demostrativas/rendimientos-mobile.png)
-![mobile](https://github.com/FedericoMaldonado/arg-info/blob/main/imagenes%20demostrativas/feriados-mobile.png)
+![home](https://github.com/FedericoMaldonado/arg-info/blob/main/imagenes%20demostrativas/home-escritorio.png) ![dolares](https://github.com/FedericoMaldonado/arg-info/blob/main/imagenes%20demostrativas/dolares-escritorio.png) ![feriados](https://github.com/FedericoMaldonado/arg-info/blob/main/imagenes%20demostrativas/feriados-escritorio.png)
+
+![mobile](https://github.com/FedericoMaldonado/arg-info/blob/main/imagenes%20demostrativas/rendimientos-mobile.png) ![mobile](https://github.com/FedericoMaldonado/arg-info/blob/main/imagenes%20demostrativas/feriados-mobile.png)
+
 
 ## Project Setup
 
