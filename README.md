@@ -9,6 +9,10 @@ cotizaciones históricas y finanzas). Los datos los obtengo desde una API public
 > [!TIP]
 > Los datos estan presentados visualmente en tablas y graficos.
 
+### `Web funcionando:`
+- [ARG INFO](https://arg-info.netlify.app/)
+
+
 ### `Información de la API:`
 
 - [API](https://argentinadatos.com/docs/)
